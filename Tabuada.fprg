@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 03:22:12 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1LVTFUUEJOOzIwMjQtMDctMjc7IjAzOjA5OjM5ICI7MzUwNQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1LVTFUUEJOOzIwMjQtMDctMjc7IjAzOjIyOjEyICI7MTszNTk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contador, tabuada" type="Integer" array="False" size=""/>
+            <comment text="Declara as vari&#225;veis contador e tabuada;&#13;&#10;Contador far&#225; a contagem da tabuada;&#13;&#10;Tabuada receber&#225; o valor do usu&#225;rio;"/>
+            <output expression="&quot;Digite a tabuada desejada&quot;" newline="True"/>
+            <input variable="tabuada"/>
+            <for variable="contador" start="1" end="10" direction="inc" step="1">
+                <comment text="&quot;Looping que far&#225; a contagem da multiplica&#231;&#227;o da tabuada at&#233; 10 n&#250;meros&quot;"/>
+                <output expression="tabuada&amp;&quot;*&quot;&amp;contador&amp;&quot;=&quot;&amp;tabuada*contador" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
