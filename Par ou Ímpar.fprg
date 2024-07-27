@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 12:55:30 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1LVTFUUEJOOzIwMjQtMDctMjc7IjEyOjM3OjE4ICI7MzUwMw=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1LVTFUUEJOOzIwMjQtMDctMjc7IjEyOjU1OjMwICI7NDszNjA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <comment text="Vari&#225;vel para armazenar o valor digitado pelo usu&#225;rio&#13;&#10;"/>
+            <declare name="calculo" type="Integer" array="False" size=""/>
+            <comment text="Vari&#225;vel para armazenar opera&#231;&#227;o"/>
+            <output expression="&quot;Digite um n&#250;mero inteiro&quot;" newline="True"/>
+            <comment text="Printa na tela do usu&#225;rio"/>
+            <input variable="num"/>
+            <comment text="L&#234; o n&#250;mero digitado pelo usu&#225;rio"/>
+            <assign variable="Calculo" expression="num%2"/>
+            <comment text="Fun&#231;&#227;o para realizar o c&#225;lculo"/>
+            <if expression="calculo=0">
+                <then>
+                    <output expression="&quot;O n&#250;mero digitado &#233; Par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O n&#250;mero digitado &#233; &#237;mpar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
