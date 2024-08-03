@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 12:06:13 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1LVTFUUEJOOzIwMjQtMDctMjc7IjA1OjA4OjMyICI7MzQ5OQ=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1LVTFUUEJOOzIwMjQtMDgtMDM7IjEyOjA2OjEzICI7NjszNjAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura, menorAltura, maiorAltura, soma, media" type="Real" array="False" size=""/>
+            <comment text="Aqui foi declarada algumas das vari&#225;veis que ser&#225; utilizadas no decorrer do algoritmo"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Aqui a vari&#225;vel i est&#225; declarada como a figura dos usu&#225;rios que ir&#227;o inserir suas idades conforme solicitado"/>
+            <assign variable="menorAltura" expression="0"/>
+            <assign variable="maiorAltura" expression="0"/>
+            <comment text="Aqui foi atribu&#237;do o valor inicial de 0 para as vari&#225;veis menorAltura e maiorAltura"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <comment text="Aqui iniciar&#225; o looping, o looping ir&#225; se repetir at&#233; que atinja a condi&#231;&#227;o declarada. Nesse caso ir&#225; solicitar 5 alturas"/>
+                <output expression="&quot;Digite sua altura&quot;" newline="True"/>
+                <input variable="altura"/>
+                <while expression="altura&lt;=0 or altura&gt;3">
+                    <output expression="&quot;Digite sua altura&quot;" newline="True"/>
+                    <input variable="altura"/>
+                </while>
+                <comment text="No final do looping ele ir&#225; analisar as condi&#231;&#245;es abaixo. "/>
+                <if expression="altura&gt;maiorAltura">
+                    <then>
+                        <comment text="Nessa condi&#231;&#227;o o algoritmo ir&#225; analisar se a vari&#225;vel &quot;altura&quot; &#233; maior que a vari&#225;vel &quot;maiorAltura&quot;"/>
+                        <assign variable="maiorAltura" expression="altura"/>
+                        <comment text="Se a condi&#231;&#227;o for verdadeira, a vari&#225;vel &quot;maiorAltura&quot; passa a assumir o valor da vari&#225;vel &quot;altura&quot;"/>
+                    </then>
+                    <else>
+                        <comment text="Se a condi&#231;&#227;o for falsa, o algoritmo passar&#225; para a proxima condi&#231;&#227;o"/>
+                    </else>
+                </if>
+                <if expression="i=1">
+                    <then>
+                        <comment text="Aqui o algoritmo ir&#225; olhar a primeira altura digitada e far&#225; com que a mesma seja considerada como a menor altura at&#233; o momento"/>
+                        <assign variable="menorAltura" expression="altura"/>
+                        <comment text="Fazendo com que a vari&#225;vel &quot;menorAltura&quot; assuma o valor da primeira altura digitada"/>
+                    </then>
+                    <else>
+                        <comment text="Quando &quot;i&quot; for diferente da condi&#231;&#227;o acima, o algoritmo passar&#225; para pr&#243;xima condi&#231;&#227;o"/>
+                    </else>
+                </if>
+                <if expression="altura&lt;menorAltura">
+                    <then>
+                        <comment text="Nessa condi&#231;&#227;o o algoritmo ir&#225; analisar se a vari&#225;vel &quot;altura&quot; &#233; menor que a vari&#225;vel &quot;menorAltura&quot;"/>
+                        <assign variable="menorAltura" expression="altura"/>
+                        <comment text="Se a condi&#231;&#227;o for verdadeira, a vari&#225;vel &quot;menorAltura&quot; passa a assumir o valor da vari&#225;vel &quot;altura&quot;, ou seja, a nova menor altura que foi digitada"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="soma" expression="altura+altura"/>
+            </for>
+            <assign variable="media" expression="soma/5"/>
+        </body>
+    </function>
+</flowgorithm>
